@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: #000;
+    color: #08c055;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .loading-box {
+    border: 3px solid #08c055;
+    padding: 32px 24px;
+    width: 100%;
+    max-width: 520px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(8, 192, 85, 0.25);
+    background: #050505;
+  }
+  
+  .loading-box h1 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: #08c055;
+  }
+  
+  .loading-text {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    min-height: 2.2em;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 24px;
+    background: #171a0a;
+    border: 2px solid #08c055;
+    border-radius: 999px;
+    margin-top: 24px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #08c055, #2ecc71);
+    border-radius: 999px;
+    transition: width 0.05s linear;
+  }
+  
+  .progress-number {
+    margin-top: 16px;
+    font-size: 0.8rem;
+    color: #ffffff;
+  }
+  
+  .smile {
+    color: gold;
+    margin-top: 24px;
+    font-size: 0.75rem;
+    animation: blink 1s steps(1) infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0.3;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .loading-box {
+      padding: 24px 16px;
+    }
+  
+    .loading-box h1 {
+      font-size: 1.1rem;
+    }
+  
+    .loading-text,
+    .progress-number,
+    .smile {
+      font-size: 0.65rem;
+    }
+  
+    .progress-bar {
+      height: 20px;
+    }
+  }

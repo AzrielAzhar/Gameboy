@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIW MORROL | Tetris</title>
+  <link rel="stylesheet" href="tetris.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="console">
+    <section class="screen-wrapper">
+      <div class="screen-header">
+        <span class="power-dot"></span>
+        <p>TETRIS</p>
+      </div>
+
+      <div class="screen">
+        <p class="label">Mini Game</p>
+        <h1>Tetris Mode 🎮</h1>
+
+        <div class="game-layout">
+          <div class="board" id="board"></div>
+
+          <div class="side-panel">
+            <div class="info-box">
+              <p class="info-title">STATUS</p>
+              <p id="game-status">READY</p>
+            </div>
+
+            <div class="info-box">
+              <p class="info-title">SCORE</p>
+              <p id="score">0000</p>
+            </div>
+
+            <div class="info-box">
+              <p class="info-title">LEVEL</p>
+              <p id="level">01</p>
+            </div>
+
+            <div class="info-box">
+              <p class="info-title">LINES</p>
+              <p id="lines">00</p>
+            </div>
+
+            <div class="info-box next-box">
+              <p class="info-title">NEXT</p>
+              <div class="next-board" id="next-board"></div>
+            </div>
+          </div>
+        </div>
+
+        <p class="hint" id="hint-text">
+          ← → move • ↑ rotate • ↓ drop • space hard drop • P pause
+        </p>
+
+        <div class="button-group">
+          <button id="start-btn" class="screen-btn">Start</button>
+          <button id="pause-btn" class="screen-btn">Pause</button>
+          <button id="reset-btn" class="screen-btn">Reset</button>
+        </div>
+
+        <div class="touch-controls">
+          <div class="touch-row">
+            <button id="rotate-btn" class="touch-btn">Rotate</button>
+            <button id="hard-drop-btn" class="touch-btn">Drop</button>
+          </div>
+
+          <div class="touch-row">
+            <button id="left-btn" class="touch-btn">◀</button>
+            <button id="down-btn" class="touch-btn">▼</button>
+            <button id="right-btn" class="touch-btn">▶</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-buttons">
+      <a href="menu.html" class="pill-btn">BACK</a>
+    </section>
+  </main>
+
+  <script src="tetris.js"></script>
+</body>
+</html>

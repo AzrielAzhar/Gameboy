@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIW MORROL Menu</title>
+  <link rel="stylesheet" href="menu.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="console">
+    <section class="screen-wrapper">
+      <div class="screen-header">
+        <span class="power-dot"></span>
+        <p>POWER</p>
+      </div>
+
+      <div class="screen">
+        <h1>MIW MORROL</h1>
+        <h2>Addllene</h2>
+        <p class="subtitle">Choose your menu</p>
+
+        <ul class="menu-list" id="menu-list">
+          <li class="menu-item active" data-link="message.html">Message</li>
+          <li class="menu-item" data-link="gallery.html">Gallery</li>
+          <li class="menu-item" data-link="music.html">Music</li>
+          <li class="menu-item" data-link="tetris.html">Tetris</li>
+        </ul>
+
+        <p class="hint">Use ↑ ↓ and Enter</p>
+      </div>
+    </section>
+
+    <section class="console-body">
+      <div class="dpad">
+        <div class="dpad-btn up"></div>
+        <div class="dpad-btn left"></div>
+        <div class="dpad-center"></div>
+        <div class="dpad-btn right"></div>
+        <div class="dpad-btn down"></div>
+      </div>
+
+      <div class="action-buttons">
+        <button class="round-btn">B</button>
+        <button class="round-btn">A</button>
+      </div>
+    </section>
+
+    <section class="bottom-buttons">
+      <button class="pill-btn">SELECT</button>
+      <button class="pill-btn">START</button>
+    </section>
+  </main>
+
+  <script src="menu.js"></script>
+</body>
+</html>

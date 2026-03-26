@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MIW MORROL | Music</title>
+  <link rel="stylesheet" href="music.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="console">
+    <section class="screen-wrapper">
+      <div class="screen-header">
+        <span class="power-dot"></span>
+        <p>MUSIC</p>
+      </div>
+
+      <div class="screen">
+        <p class="label">Sound Player</p>
+        <h1>Ur Playlist 🎵</h1>
+
+        <div class="music-card">
+          <p class="song-title" id="song-title">Loading...</p>
+          <p class="song-artist" id="song-artist">Please wait</p>
+
+          <div class="progress-area">
+            <div class="progress-bar">
+              <div class="progress" id="progress"></div>
+            </div>
+
+            <div class="time-info">
+              <span id="current-time">00:00</span>
+              <span id="duration">00:00</span>
+            </div>
+          </div>
+
+          <div class="button-group">
+            <button id="prev-btn" class="screen-btn">Prev</button>
+            <button id="play-btn" class="screen-btn">Play</button>
+            <button id="next-btn" class="screen-btn">Next</button>
+          </div>
+        </div>
+
+        <p class="page-indicator" id="page-indicator">01 / 03</p>
+      </div>
+    </section>
+
+    <section class="bottom-buttons">
+      <a href="menu.html" class="pill-btn">BACK</a>
+    </section>
+
+    <audio id="audio"></audio>
+  </main>
+
+  <script src="music.js"></script>
+</body>
+</html>
