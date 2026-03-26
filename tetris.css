@@ -124,6 +124,7 @@ body {
 }
 
 .info-box {
+  width: 100%;
   border: 2px solid #556b2f;
   border-radius: 8px;
   padding: 10px 6px;
@@ -245,49 +246,98 @@ body {
   display: inline-block;
 }
 
-@media (max-width: 390px) {
+/* Tablet / HP besar */
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
   .console {
-    padding: 16px 14px 24px;
+    padding: 16px 12px 22px;
+    border-radius: 22px;
+  }
+
+  .screen-wrapper {
+    padding: 12px;
   }
 
   .screen {
-    min-height: 400px;
-    padding: 18px 12px;
+    min-height: auto;
+    padding: 16px 10px;
   }
 
   .screen h1 {
     font-size: 0.72rem;
+    margin-bottom: 14px;
+  }
+
+  .label {
+    font-size: 0.36rem;
+    margin-bottom: 10px;
   }
 
   .game-layout {
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
   .board {
-    width: 180px;
+    width: min(100%, 220px);
     height: 360px;
   }
 
   .side-panel {
-    width: 92px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
   }
 
+  .info-box {
+    padding: 8px 4px;
+  }
+
+  .next-box {
+    grid-column: span 2;
+  }
+
+  .next-board {
+    width: 56px;
+    height: 56px;
+    gap: 1px;
+  }
+
   .info-title {
-    font-size: 0.34rem;
+    font-size: 0.28rem;
+    margin-bottom: 6px;
+    line-height: 1.4;
   }
 
   .info-box p:last-child {
-    font-size: 0.45rem;
+    font-size: 0.38rem;
+    line-height: 1.4;
+  }
+
+  .hint {
+    margin-top: 14px;
+    min-height: auto;
+    font-size: 0.3rem;
+    line-height: 1.6;
+  }
+
+  .button-group {
+    margin-top: 14px;
+    gap: 8px;
   }
 
   .screen-btn {
-    font-size: 0.38rem;
-    padding: 11px 6px;
+    font-size: 0.32rem;
+    padding: 10px 6px;
   }
 
   .touch-controls {
-    margin-top: 16px;
+    margin-top: 14px;
     gap: 8px;
   }
 
@@ -297,12 +347,92 @@ body {
 
   .touch-btn {
     min-width: 62px;
-    font-size: 0.34rem;
-    padding: 11px 8px;
+    font-size: 0.3rem;
+    padding: 10px 8px;
   }
 
   .pill-btn {
-    font-size: 0.38rem;
-    padding: 9px 14px;
+    font-size: 0.34rem;
+    padding: 8px 12px;
+  }
+}
+
+/* HP kecil */
+@media (max-width: 390px) {
+  body {
+    padding: 8px;
+  }
+
+  .console {
+    padding: 12px 10px 18px;
+  }
+
+  .screen-wrapper {
+    padding: 10px;
+    border-radius: 16px 16px 36px 16px;
+  }
+
+  .screen {
+    padding: 12px 8px;
+  }
+
+  .screen h1 {
+    font-size: 0.62rem;
+  }
+
+  .board {
+    width: min(100%, 190px);
+    height: 320px;
+    padding: 5px;
+    gap: 1px;
+  }
+
+  .side-panel {
+    gap: 6px;
+  }
+
+  .info-box {
+    padding: 7px 3px;
+  }
+
+  .info-title {
+    font-size: 0.24rem;
+  }
+
+  .info-box p:last-child {
+    font-size: 0.32rem;
+  }
+
+  .next-board {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hint {
+    font-size: 0.26rem;
+  }
+
+  .button-group {
+    gap: 6px;
+  }
+
+  .screen-btn {
+    font-size: 0.28rem;
+    padding: 9px 4px;
+  }
+
+  .touch-row {
+    gap: 6px;
+  }
+
+  .touch-btn {
+    min-width: 54px;
+    font-size: 0.26rem;
+    padding: 9px 6px;
+  }
+
+  .pill-btn {
+    font-size: 0.28rem;
+    padding: 7px 10px;
   }
 }
