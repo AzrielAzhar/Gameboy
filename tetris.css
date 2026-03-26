@@ -10,8 +10,8 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 20px;
+  align-items: flex-start;
+  padding: 12px;
   color: #1f2a1f;
 }
 
@@ -21,7 +21,7 @@ body {
   background: #d6d6d6;
   border: 4px solid #9c9c9c;
   border-radius: 28px;
-  padding: 20px 18px 28px;
+  padding: 18px 14px 24px;
   box-shadow:
     inset -4px -4px 0 #b8b8b8,
     inset 4px 4px 0 #f1f1f1,
@@ -31,8 +31,9 @@ body {
 .screen-wrapper {
   background: #8b8f99;
   border-radius: 20px 20px 50px 20px;
-  padding: 16px;
-  margin-bottom: 24px;
+  padding: 12px;
+  margin-bottom: 20px;
+  min-width: 0;
 }
 
 .screen-header {
@@ -50,43 +51,47 @@ body {
   border-radius: 50%;
   background: #d43b3b;
   box-shadow: 0 0 8px rgba(212, 59, 59, 0.8);
+  flex-shrink: 0;
 }
 
 .screen {
   background: #9bbc0f;
   border: 4px solid #556b2f;
   border-radius: 12px;
-  min-height: 420px;
-  padding: 22px 16px;
+  padding: 16px 10px;
   color: #243b0b;
   display: flex;
   flex-direction: column;
   box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.15);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .label {
-  font-size: 0.45rem;
-  margin-bottom: 14px;
+  font-size: 0.38rem;
+  margin-bottom: 10px;
   opacity: 0.8;
 }
 
 .screen h1 {
-  font-size: 0.85rem;
+  font-size: 0.72rem;
   line-height: 1.6;
   text-align: center;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .game-layout {
   display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
 }
 
 .board {
-  width: 220px;
-  height: 440px;
+  width: min(100%, 220px);
+  height: 360px;
   border: 3px solid #556b2f;
   border-radius: 8px;
   background: rgba(36, 59, 11, 0.12);
@@ -94,8 +99,9 @@ body {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(20, 1fr);
   gap: 2px;
-  padding: 6px;
-  flex-shrink: 0;
+  padding: 5px;
+  margin: 0 auto;
+  min-width: 0;
 }
 
 .cell {
@@ -116,46 +122,50 @@ body {
 }
 
 .side-panel {
-  width: 85px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex-shrink: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  min-width: 0;
 }
 
 .info-box {
   width: 100%;
+  min-width: 0;
   border: 2px solid #556b2f;
   border-radius: 8px;
-  padding: 10px 6px;
+  padding: 8px 4px;
   text-align: center;
   background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
 }
 
 .info-title {
-  font-size: 0.38rem;
-  line-height: 1.6;
-  margin-bottom: 8px;
+  font-size: 0.28rem;
+  line-height: 1.4;
+  margin-bottom: 6px;
   opacity: 0.8;
 }
 
 .info-box p:last-child {
-  font-size: 0.52rem;
-  line-height: 1.6;
+  font-size: 0.38rem;
+  line-height: 1.4;
+  word-break: break-word;
 }
 
 .next-box {
+  grid-column: 1 / -1;
   padding-bottom: 8px;
 }
 
 .next-board {
-  width: 70px;
-  height: 70px;
+  width: 56px;
+  height: 56px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  gap: 2px;
+  gap: 1px;
 }
 
 .next-cell {
@@ -168,28 +178,30 @@ body {
 }
 
 .hint {
-  margin-top: 18px;
-  min-height: 4.8em;
+  margin-top: 14px;
   text-align: center;
-  font-size: 0.4rem;
-  line-height: 1.8;
+  font-size: 0.30rem;
+  line-height: 1.6;
+  min-height: auto;
 }
 
 .button-group {
-  margin-top: 18px;
+  margin-top: 14px;
   display: flex;
-  gap: 12px;
+  gap: 8px;
+  width: 100%;
 }
 
 .screen-btn {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   border: 2px solid #243b0b;
   background: transparent;
   color: #243b0b;
-  padding: 12px 8px;
+  padding: 10px 6px;
   border-radius: 10px;
   font-family: 'Press Start 2P', cursive;
-  font-size: 0.45rem;
+  font-size: 0.32rem;
   cursor: pointer;
 }
 
@@ -198,28 +210,30 @@ body {
 }
 
 .touch-controls {
-  margin-top: 18px;
+  margin-top: 14px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  width: 100%;
 }
 
 .touch-row {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .touch-btn {
   border: 2px solid #243b0b;
   background: rgba(255, 255, 255, 0.08);
   color: #243b0b;
-  min-width: 78px;
-  padding: 12px 10px;
+  min-width: 62px;
+  padding: 10px 8px;
   border-radius: 10px;
   font-family: 'Press Start 2P', cursive;
-  font-size: 0.42rem;
+  font-size: 0.30rem;
   cursor: pointer;
   touch-action: manipulation;
 }
@@ -237,202 +251,126 @@ body {
   border: none;
   background: #7d7d7d;
   color: #f0f0f0;
-  padding: 10px 18px;
+  padding: 8px 12px;
   border-radius: 999px;
   font-family: 'Press Start 2P', cursive;
-  font-size: 0.5rem;
+  font-size: 0.34rem;
   text-decoration: none;
   transform: rotate(-20deg);
   display: inline-block;
 }
 
-/* Tablet / HP besar */
-@media (max-width: 480px) {
+/* Desktop / layar lebih lebar */
+@media (min-width: 481px) {
   body {
-    padding: 12px;
+    align-items: center;
+    padding: 20px;
   }
 
   .console {
-    padding: 16px 12px 22px;
-    border-radius: 22px;
+    padding: 20px 18px 28px;
   }
 
   .screen-wrapper {
-    padding: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
   }
 
   .screen {
-    min-height: auto;
-    padding: 16px 10px;
-  }
-
-  .screen h1 {
-    font-size: 0.72rem;
-    margin-bottom: 14px;
+    min-height: 420px;
+    padding: 22px 16px;
   }
 
   .label {
-    font-size: 0.36rem;
-    margin-bottom: 10px;
-  }
-
-  .game-layout {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .board {
-    width: min(100%, 220px);
-    height: 360px;
-  }
-
-  .side-panel {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-
-  .info-box {
-    padding: 8px 4px;
-  }
-
-  .next-box {
-    grid-column: span 2;
-  }
-
-  .next-board {
-    width: 56px;
-    height: 56px;
-    gap: 1px;
-  }
-
-  .info-title {
-    font-size: 0.28rem;
-    margin-bottom: 6px;
-    line-height: 1.4;
-  }
-
-  .info-box p:last-child {
-    font-size: 0.38rem;
-    line-height: 1.4;
-  }
-
-  .hint {
-    margin-top: 14px;
-    min-height: auto;
-    font-size: 0.3rem;
-    line-height: 1.6;
-  }
-
-  .button-group {
-    margin-top: 14px;
-    gap: 8px;
-  }
-
-  .screen-btn {
-    font-size: 0.32rem;
-    padding: 10px 6px;
-  }
-
-  .touch-controls {
-    margin-top: 14px;
-    gap: 8px;
-  }
-
-  .touch-row {
-    gap: 8px;
-  }
-
-  .touch-btn {
-    min-width: 62px;
-    font-size: 0.3rem;
-    padding: 10px 8px;
-  }
-
-  .pill-btn {
-    font-size: 0.34rem;
-    padding: 8px 12px;
-  }
-}
-
-/* HP kecil */
-@media (max-width: 390px) {
-  body {
-    padding: 8px;
-  }
-
-  .console {
-    padding: 12px 10px 18px;
-  }
-
-  .screen-wrapper {
-    padding: 10px;
-    border-radius: 16px 16px 36px 16px;
-  }
-
-  .screen {
-    padding: 12px 8px;
+    font-size: 0.45rem;
+    margin-bottom: 14px;
   }
 
   .screen h1 {
-    font-size: 0.62rem;
+    font-size: 0.85rem;
+    margin-bottom: 18px;
+  }
+
+  .game-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
   }
 
   .board {
-    width: min(100%, 190px);
-    height: 320px;
-    padding: 5px;
-    gap: 1px;
+    width: 220px;
+    height: 440px;
+    padding: 6px;
+    gap: 2px;
+    margin: 0;
   }
 
   .side-panel {
-    gap: 6px;
+    width: 85px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .info-box {
-    padding: 7px 3px;
+    padding: 10px 6px;
   }
 
   .info-title {
-    font-size: 0.24rem;
+    font-size: 0.38rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
   }
 
   .info-box p:last-child {
-    font-size: 0.32rem;
+    font-size: 0.52rem;
+    line-height: 1.6;
+  }
+
+  .next-box {
+    grid-column: auto;
   }
 
   .next-board {
-    width: 48px;
-    height: 48px;
+    width: 70px;
+    height: 70px;
+    gap: 2px;
   }
 
   .hint {
-    font-size: 0.26rem;
+    margin-top: 18px;
+    font-size: 0.4rem;
+    line-height: 1.8;
   }
 
   .button-group {
-    gap: 6px;
+    margin-top: 18px;
+    gap: 12px;
   }
 
   .screen-btn {
-    font-size: 0.28rem;
-    padding: 9px 4px;
+    font-size: 0.45rem;
+    padding: 12px 8px;
+  }
+
+  .touch-controls {
+    margin-top: 18px;
+    gap: 10px;
   }
 
   .touch-row {
-    gap: 6px;
+    gap: 10px;
   }
 
   .touch-btn {
-    min-width: 54px;
-    font-size: 0.26rem;
-    padding: 9px 6px;
+    min-width: 78px;
+    padding: 12px 10px;
+    font-size: 0.42rem;
   }
 
   .pill-btn {
-    font-size: 0.28rem;
-    padding: 7px 10px;
+    padding: 10px 18px;
+    font-size: 0.5rem;
   }
 }
