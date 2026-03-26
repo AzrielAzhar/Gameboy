@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     const galleryItems = [
       {
-        image: "assets/images/foto1.jpg",
+        image: "assets/images/Foto1.jpg",
         caption: "Awal mula bisa dm kenalan karena ini ya gaa wkwk."
       },
       {
-        image: "assets/images/foto2.jpg",
+        image: "assets/images/Foto2.jpg",
         caption: "Ni seenaknya ss trus ta gambar, maapin yak."
       },
       {
-        image: "assets/images/foto3.jpg",
+        image: "assets/images/Foto3.jpg",
         caption: "Pertama kali diajak fotbarr walau di game haha."
       },
       {
-        image: "assets/images/foto4.jpg",
+        image: "assets/images/Foto4.jpg",
         caption: "Sama aja kek tadi cuman dari depan wkwk."
       }
     ];
